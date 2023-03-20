@@ -1,7 +1,7 @@
 import AppStyle from "./AppStyle.module.css";
 import { Header } from "./components/Header/Header";
+import { Main } from "./components/Main/Main";
 import { ExpensesInput } from "./containers/ExpensesInput/ExpensesInput";
-import { ExpensesList } from "./containers/ExpensesList/ExpensesList";
 import { IncomeInput } from "./containers/IncomeInput/IncomeInput";
 
 export function App() {
@@ -10,7 +10,7 @@ export function App() {
       <Header />
       <IncomeInput />
       <ExpensesInput />
-      <ExpensesList/>
+      <Main/>
     </>
   );
 }

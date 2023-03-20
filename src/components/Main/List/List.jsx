@@ -4,8 +4,8 @@ export function List({ items }) {
     <div>
       <table>
         <tbody>
-          {items.map((item) => (
-            <ListItem item={item} />
+          {items.map((item, index) => (
+            <ListItem key={item+index} item={item} />
           ))}
         </tbody>
       </table>

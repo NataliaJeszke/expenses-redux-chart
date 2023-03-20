@@ -20,3 +20,5 @@ export const expenseSlice = createSlice({
 });
 
 export const { addExpenseAction, deleteExpenseByNanoID } = expenseSlice.actions;
+
+export default expenseSlice.reducer;

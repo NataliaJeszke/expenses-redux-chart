@@ -12,7 +12,11 @@ export const expenseSlice = createSlice({
       console.log(action);
       currentSlice.expenseList.push(action.payload);
     },
+    deleteExpenseByNanoID: (state, action) => {
+      const id = action.payload;
+      state.expenseList = state.expenseList.filter((item) => item.id !== id);
+    },
   },
 });
 
-export const { addExpenseAction } = expenseSlice.actions;
+export const { addExpenseAction, deleteExpenseByNanoID } = expenseSlice.actions;

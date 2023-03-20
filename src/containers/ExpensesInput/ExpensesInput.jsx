@@ -1,16 +1,20 @@
 import { addExpenseAction } from "../../store/expense/expense-slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { nanoid } from "@reduxjs/toolkit";
 
 export function ExpensesInput(props) {
   const dispatch = useDispatch();
+
   const [price, setPrice] = useState();
   const [expenseName, setExpenseName] = useState();
+  const [id, setId] = useState();
+
   function submit(event) {
     event.preventDefault();
-    dispatch(addExpenseAction({name:expenseName, price: price}));
-    console.log("submitExpenses");
+    dispatch(addExpenseAction({ name: expenseName, price: price, id: id }));
   }
+
   return (
     <form onSubmit={submit}>
       <label>
@@ -29,7 +33,7 @@ export function ExpensesInput(props) {
           onChange={(event) => setPrice(event.target.value)}
         />
       </label>
-      <button type="submit" value="Submit">
+      <button type="submit" value="Submit" onClick={() => setId(nanoid())}>
         Add
       </button>
     </form>

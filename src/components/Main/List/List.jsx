@@ -5,7 +5,7 @@ export function List({ items }) {
       <table>
         <tbody>
           {items.map((item, index) => (
-            <ListItem key={item+index} item={item} />
+            <ListItem key={item + index} item={item} />
           ))}
         </tbody>
       </table>

@@ -1,6 +1,12 @@
+import { addExpenseAction } from "../../store/expense/expense-slice";
+import {useDispatch} from "react-redux";
+
 export function ExpenseInput() {
+    const dispatch = useDispatch();
+
     function submit(event){
         event.preventDefault();
+        dispatch(addExpenseAction());
         console.log("submitExpenses")
     }
     return (

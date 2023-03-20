@@ -10,4 +10,6 @@ export const expenseSlice = createSlice({
             console.log("addExpenseActionConsole");
         }
     }
-})
+});
+
+export const {addExpenseAction} = expenseSlice.actions

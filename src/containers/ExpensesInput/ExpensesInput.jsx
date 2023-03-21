@@ -1,3 +1,4 @@
+import expensesStyle from "./ExpensesInputStyle.module.css"
 import { addExpenseAction } from "../../store/expense/expense-slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -24,6 +25,7 @@ export function ExpensesInput(props) {
       })
     );
   }
+
 
   return (
     <form onSubmit={submit}>

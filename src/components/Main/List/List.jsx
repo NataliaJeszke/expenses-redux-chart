@@ -1,4 +1,4 @@
-import { ListItem } from "../../ListItem/ListItem";
+import { ListItem } from "../../../containers/ListItem/ListItem";
 export function List({ items }) {
   return (
     <div>

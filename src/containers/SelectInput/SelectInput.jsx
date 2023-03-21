@@ -5,7 +5,7 @@ const SelectInput = ({ options, onChange }) => {
   };
 
   const select_input={
-    control: (styles) =>({...styles, height: 29, margin:19})
+    control: (styles) =>({...styles, height: 29, margin:19, width: 200})
   }
 
   return (

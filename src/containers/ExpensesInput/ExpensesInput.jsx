@@ -1,4 +1,4 @@
-import expensesStyle from "./ExpensesInputStyle.module.css"
+import expensesStyle from "./ExpensesInputStyle.module.css";
 import { addExpenseAction } from "../../store/expense/expense-slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -26,25 +26,22 @@ export function ExpensesInput(props) {
     );
   }
 
-
   return (
     <form onSubmit={submit}>
-      <label>
-        Add your expense
-        <input
-          type="text"
-          placeholder="Ex: Laptop"
-          onChange={(event) => setExpenseName(event.target.value)}
-        />
-      </label>
-      <label>
-        Cost
-        <input
-          type="number"
-          placeholder="Ex: 4000"
-          onChange={(event) => setPrice(event.target.value)}
-        />
-      </label>
+      <label htmlFor="expenseName">Add your expense:</label>
+      <input
+        type="text"
+        id="expenseName"
+        placeholder="Ex: Laptop"
+        onChange={(event) => setExpenseName(event.target.value)}
+      />
+      <label htmlFor="price">Cost:</label>
+      <input
+        type="number"
+        id="price"
+        placeholder="Ex: 4000"
+        onChange={(event) => setPrice(event.target.value)}
+      />
       <SelectInput
         options={catalogue}
         onChange={(value) => setSelectedOption(value)}

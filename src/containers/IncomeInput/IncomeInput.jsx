@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setIncomeAction } from "../../store/income/income-slice";
+import incomeStyle from "./IncomeInputStyle.module.css";
 export function IncomeInput(props) {
   const income = useSelector((store) => store.INCOME.income);
   const dispatch = useDispatch();
@@ -8,10 +9,13 @@ export function IncomeInput(props) {
   }
   return (
     <form>
-      <label>
-        Add your income
-        <input type="number" defaultValue={income} onChange={setIncome} />
-      </label>
+      <label htmlFor="income">Add your income</label>
+      <input
+        type="number"
+        id="income"
+        defaultValue={income}
+        onChange={(event) => setIncome(event.target.value)}
+      />
     </form>
   );
 }

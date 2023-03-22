@@ -1,12 +1,18 @@
 import { ExpensesContainer } from "../../containers/ExpensesContainer/ExpensesContainer";
-import { FilterButtons } from "./FilterButtons/FilterButtons";
+import { Chart } from "../Chart/Chart";
 import { InputSection } from "./InputSection/InputSection";
+import mainStyle from "./MainStyle.module.css";
 
 export function Main() {
   return (
     <>
-      <InputSection />
-      <ExpensesContainer />
+      <div className={mainStyle.main}>
+        <InputSection />
+        <div className={mainStyle.main_ex_chart}>
+          <ExpensesContainer />
+          <Chart />
+        </div>
+      </div>
     </>
   );
 }

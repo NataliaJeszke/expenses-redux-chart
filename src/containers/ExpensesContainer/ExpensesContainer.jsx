@@ -3,6 +3,7 @@ import { FilterButtons } from "../../components/Main/FilterButtons/FilterButtons
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { ExpenseTotal } from "../ExpenseTotal/ExpenseTotal";
+import ExpensesContainerStyle from "./ExpensesContainerStyle.module.css"
 
 export function ExpensesContainer({}) {
   //Get all items (expenses) from store and filter by categories//
@@ -22,13 +23,15 @@ export function ExpensesContainer({}) {
     setSelectedCategory();
   };
   return (
-    <>
+    <div className={ExpensesContainerStyle.container}>
       <FilterButtons
         onCategoryClick={handleCategoryClick}
         onClearFilter={handleClearFilter}
       />
       <List items={filteredExpenses} />
       <ExpenseTotal expenses={filteredExpenses} />
-    </>
+    </div>
+
+    
   );
 }

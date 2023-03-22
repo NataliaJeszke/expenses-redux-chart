@@ -1,4 +1,5 @@
 import { List } from "../../components/Main/List/List";
+import { FilterButtons } from "../../components/Main/FilterButtons/FilterButtons";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
@@ -13,23 +14,16 @@ export function ExpensesList({}) {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
+
+  const handleClearFilter = () => {
+    setSelectedCategory();
+  };
   return (
     <>
-      <div>
-        <button onClick={() => handleCategoryClick("housing")}>Housing</button>
-        <button onClick={() => handleCategoryClick("food")}>Food</button>
-        <button onClick={() => handleCategoryClick("transportation")}>
-          Transportation
-        </button>
-        <button onClick={() => handleCategoryClick("clothing")}>
-          Clothing
-        </button>
-        <button onClick={() => handleCategoryClick("medical")}>Medical</button>
-        <button onClick={() => handleCategoryClick("personal")}>
-          Personal
-        </button>
-        <button onClick={() => setSelectedCategory()}>Clear Filter</button>
-      </div>
+      <FilterButtons
+        onCategoryClick={handleCategoryClick}
+        onClearFilter={handleClearFilter}
+      />
       <List items={filteredExpenses} />
     </>
   );

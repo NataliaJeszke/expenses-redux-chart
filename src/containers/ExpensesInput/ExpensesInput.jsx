@@ -27,7 +27,7 @@ export function ExpensesInput(props) {
   }
 
   return (
-    <form onSubmit={submit}>
+    <form onSubmit={submit} className={expensesStyle.expenseForm}>
       <label htmlFor="expenseName">Add your expense:</label>
       <input
         type="text"

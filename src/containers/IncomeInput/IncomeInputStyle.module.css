@@ -1,0 +1,7 @@
+@media (max-width: 576px){
+    .incomeForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

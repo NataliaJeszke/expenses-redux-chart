@@ -2,6 +2,8 @@ form{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 input{
@@ -33,3 +35,10 @@ label {
     justify-content: center;
 }
 
+@media (max-width: 576px){
+    .expenseForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

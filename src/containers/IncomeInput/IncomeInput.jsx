@@ -8,7 +8,7 @@ export function IncomeInput(props) {
     dispatch(setIncomeAction(Number.parseFloat(event.target.value)));
   }
   return (
-    <form>
+    <form className={incomeStyle.incomeForm}>
       <label htmlFor="income">Add your income</label>
       <input
         type="number"

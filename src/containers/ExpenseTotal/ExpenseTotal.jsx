@@ -1,12 +1,19 @@
 import { useSelector } from "react-redux";
 
-export function ExpenseTotal() {
+export function ExpenseTotal(props) {
+  const expenses = props.expenses;
+  console.log("expensesssss" + expenses);
   const income = useSelector((store) => store.INCOME.income);
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
 
   const total = expenseList.reduce((acc, expense) => {
     return Number.parseFloat(acc) + Number.parseFloat(expense.price);
   }, 0);
+
+  const cattotal = expenses.reduce((acc, expense) => {
+    return Number.parseFloat(acc) + Number.parseFloat(expense.price);
+  }, 0);
+
   const moneyLeft = income - total;
 
   return (
@@ -14,6 +21,10 @@ export function ExpenseTotal() {
       <div>
         <p>Total expenses</p>
         <p>{total} $</p>
+      </div>
+      <div>
+        <p>Category expenses</p>
+        <p>{cattotal} $</p>
       </div>
       <div>
         <p>Money left</p>

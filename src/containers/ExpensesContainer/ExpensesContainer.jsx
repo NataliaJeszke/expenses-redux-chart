@@ -2,6 +2,7 @@ import { List } from "../../components/Main/List/List";
 import { FilterButtons } from "../../components/Main/FilterButtons/FilterButtons";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { ExpenseTotal } from "../ExpenseTotal/ExpenseTotal";
 
 export function ExpensesContainer({}) {
   //Get all items (expenses) from store and filter by categories//
@@ -27,6 +28,7 @@ export function ExpensesContainer({}) {
         onClearFilter={handleClearFilter}
       />
       <List items={filteredExpenses} />
+      <ExpenseTotal expenses={filteredExpenses} />
     </>
   );
 }

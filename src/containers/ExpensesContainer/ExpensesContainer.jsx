@@ -3,7 +3,9 @@ import { FilterButtons } from "../../components/Main/FilterButtons/FilterButtons
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
-export function ExpensesList({}) {
+export function ExpensesContainer({}) {
+  //Get all items (expenses) from store and filter by categories//
+
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
   const [selectedCategory, setSelectedCategory] = useState();
 

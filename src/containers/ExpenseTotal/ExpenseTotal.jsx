@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-export function ExpenseTotal(props) {
+export function ExpenseTotal() {
   const income = useSelector((store) => store.INCOME.income);
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
 

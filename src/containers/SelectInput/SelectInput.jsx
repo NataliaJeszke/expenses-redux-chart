@@ -8,23 +8,6 @@ const SelectInput = ({ options, onChange }) => {
     onChange(option.value);
   };
 
-  // const select_input = {
-  //   control: (provided, state) => ({
-  //     ...provided,
-  //     height: 29,
-  //     margin: 10,
-  //     width: 200,
-  //     paddingBottom:0,
-  //     display: "flex",
-  //     justifyContent: "center",
-  //     alignItems: "center",
-  //     textAlign: "center",
-  //   }),
-  //   placeholder: (provided, state) => ({
-  //     ...provided,
-  //     lineHeight: "5px",
-  //   }),
-  // };
 
   return (
     <div className={selectStyle.selectContainer}> <Select

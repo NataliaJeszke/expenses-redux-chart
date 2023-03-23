@@ -1,3 +1,5 @@
+import buttonsStyle from "./FilterButtonsStyle.module.css"
+
 export function FilterButtons({ onCategoryClick, onClearFilter }) {
     return (
       <div>

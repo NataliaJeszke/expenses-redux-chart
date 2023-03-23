@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-
+import expensesTotalStyle from "./ExpensesTotalStyle.module.css"
 export function ExpenseTotal(props) {
   const expenses = props.expenses;
   console.log("expensesssss" + expenses);
@@ -17,7 +17,7 @@ export function ExpenseTotal(props) {
   const moneyLeft = income - total;
 
   return (
-    <div>
+    <div className={expensesTotalStyle.expensesTotalContainer}>
       <div>
         <p>Total expenses</p>
         <p>{total} $</p>

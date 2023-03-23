@@ -28,16 +28,13 @@ export function Chart() {
           return total;
         }),
         backgroundColor: [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56",
+          "#e3369f",
+          "#8a2be2",
+          "#97bbe8",
           "#3cba9f",
-          "#e8c3b9",
+          "#fff261",
           "#c45850",
           "#7FB3D5",
-          "#F7EFCF",
-          "#C7DC5B",
-          "#FF7F00",
         ].slice(0, categories.length),
       },
     ],
@@ -45,8 +42,20 @@ export function Chart() {
 
   return (
     <div className={ChartStyle.mainChart}>
-      <h2>Your expenses by category</h2>
-      <Pie data={data} />
+      <h2>Your &#960; chart</h2>
+
+      <Pie
+        data={data}
+        options={{
+          plugins: {
+            legend: {
+              labels: {
+                color: "white",
+              },
+            },
+          },
+        }}
+      />
     </div>
   );
 }

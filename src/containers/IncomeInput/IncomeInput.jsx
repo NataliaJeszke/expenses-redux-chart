@@ -9,8 +9,9 @@ export function IncomeInput(props) {
   }
   return (
     <form className={incomeStyle.incomeForm}>
-      <label htmlFor="income">Add your income</label>
+      <label className={incomeStyle.incomeLabel} htmlFor="income">Add your income:</label>
       <input
+      className={incomeStyle.incomeInput}
         type="number"
         id="income"
         defaultValue={income}

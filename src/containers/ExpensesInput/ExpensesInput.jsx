@@ -28,15 +28,15 @@ export function ExpensesInput(props) {
 
   return (
     <form onSubmit={submit} className={expensesStyle.expenseForm}>
-      <label htmlFor="expenseName">Add your expense:</label>
-      <input
+      <label className={expensesStyle.expenseLabel} htmlFor="expenseName">Add your expense:</label>
+      <input className={expensesStyle.expenseInput}
         type="text"
         id="expenseName"
         placeholder="Ex: Laptop"
         onChange={(event) => setExpenseName(event.target.value)}
       />
-      <label htmlFor="price">Cost:</label>
-      <input
+      <label className={expensesStyle.expenseLabel}  htmlFor="price">Cost:</label>
+      <input className={expensesStyle.expenseInput}
         type="number"
         id="price"
         placeholder="Ex: 4000"

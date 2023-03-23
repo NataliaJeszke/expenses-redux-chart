@@ -1,7 +1,21 @@
-@media (max-width: 576px){
+@media (max-width: 1206px){
     .incomeForm{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap:0;
     }
+}
+
+.incomeInput{
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    width: 20vw;
+    outline-color: #551592;
+}
+
+.incomeLabel{
+    font-size: 20px;
+    color: white;
+    
+
 }

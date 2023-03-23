@@ -3,4 +3,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
+    width: 30vw;
+}
+
+.mainChart>h2{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1206px){
+    .mainChart{
+        width: 50vw;
+    }
 }

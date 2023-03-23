@@ -20,13 +20,28 @@ input{
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     text-align: center;
+    
   }
 
 button{
-    height: 33px;
+    height: 40px;
     margin-top: 20px;
-    width: 70px;
-    
+    width: 100px;
+    border-radius: 25px;
+    color: #551592;
+    border-style: none;
+    margin-right: 5px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px; 
+}
+
+button:hover{
+    background-color: #56159211;
+    color: white;
+    cursor: pointer;   
+}
+
+button:active{
+    background-color: #56159249;
 }
 
 label {
@@ -35,10 +50,23 @@ label {
     justify-content: center;
 }
 
-@media (max-width: 576px){
+.expenseInput{
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    width: 20vw;
+    outline-color: #551592;
+}
+
+.expenseLabel{
+    font-size: 20px;
+    color: white;
+}
+
+@media (max-width: 1206px){
     .expenseForm{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap:0;
     }
 }
+

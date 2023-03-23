@@ -40,6 +40,7 @@ export function ExpensesInput(props) {
         type="number"
         id="price"
         placeholder="Ex: 4000"
+        step="any"
         onChange={(event) => setPrice(event.target.value)}
       />
       <SelectInput

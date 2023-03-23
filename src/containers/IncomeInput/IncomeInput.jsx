@@ -20,6 +20,7 @@ export function IncomeInput(props) {
         className={incomeStyle.incomeInput}
         type="number"
         id="income"
+        step="any"
         defaultValue={income}
         onChange={setIncome}
       />

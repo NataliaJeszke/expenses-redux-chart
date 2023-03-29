@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { ExpenseTotal } from "../ExpenseTotal/ExpenseTotal";
 import ExpensesContainerStyle from "./ExpensesContainerStyle.module.css";
-import FilterSelect from "../FilterSelect/FilterSelect";
 import Select, { StylesConfig } from "react-select";
 import catalogue from "../SelectInput/catalogue";
 
@@ -24,23 +23,12 @@ export function ExpensesContainer({}) {
       : expenseList;
 
   const handleCategoryClick = (categories) => {
-    if (categories.length === 0) {
-      console.error("Category is empty");
-    }
     const values = categories.map((option) => option.value);
     setSelectedCategories(values);
   };
 
-  const handleClearFilter = () => {
-    setSelectedCategories([]);
-  };
-
   return (
     <div className={ExpensesContainerStyle.container}>
-      <FilterButtons
-        onCategoryClick={handleCategoryClick}
-        onClearFilter={handleClearFilter}
-      />
       <Select
         closeMenuOnSelect={false}
         isMulti

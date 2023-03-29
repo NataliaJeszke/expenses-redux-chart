@@ -1,3 +1,73 @@
+# Expenses Tracker (ReactJS, Redux-toolkit, React-Select, React-chartjs-2)
+
+Preview for the project (https://drive.google.com/file/d/1_bNzYhtiifkQih6ffaKxZv3BC6qHEPxv/view?usp=sharing)
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+  - [Resources](#useful-resources)
+- [Author](#author)
+
+
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Add an income
+- Add expenses and delete them
+- Filter by category
+- See Pie Chart of expenses
+
+- View the optimal layout depending on their device's screen size
+- See hover and focus states for interactive elements
+
+
+### Links
+
+- Solution URL: https://github.com/NataliaJeszke/expenses-redux-chart
+
+## My process
+
+### Built with
+
+- ReactJS
+- Redux-toolkit
+- React-Select
+- React-ChartJS-2
+- CSS custom properties
+- Flexbox
+
+
+### Continued development
+
+There is a room to improve the web application. In future I would like to add more options with filter categories (e.g. to chose more than one category), responsive chart with adding and removing categories from filter. Add new section for users for adding custom categories of expenses. 
+
+## Resources
+
+vecteezy.com for image
+
+freepik.com for image
+
+Favicon icons8.com
+
+## Author
+
+- GitHub - [NataliaJeszke](https://github.com/NataliaJeszke)
+- Twitter - [@NataliaFrontend](https://www.twitter.com/NataliaFrontend)
+- Portfolio - https://nataliajeszke.github.io/portfolio/
+- Deployment - https://expenses-redux-chart-pn8e0kbha-nataliajeszke.vercel.app/
+
+
+
+---------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -2,11 +2,16 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import ChartStyle from "./ChartStyle.module.css";
-
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function Chart() {
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
+
+  const filteredExpenses = useSelector(
+    (store) => store.EXPENSE.filteredExpenses
+  );
+
+  console.log("to sa filtered expenses" + filteredExpenses);
 
   const categoriesSet = new Set(expenseList.map((expense) => expense.category));
 

@@ -6,6 +6,7 @@ export const expenseSlice = createSlice({
     expenseList: [
 
     ],
+    filteredExpenses: [],
   },
   reducers: {
     addExpenseAction: (currentSlice, action) => {
@@ -16,9 +17,12 @@ export const expenseSlice = createSlice({
       const id = action.payload;
       state.expenseList = state.expenseList.filter((item) => item.id !== id);
     },
+    filteredExpensesAction: (state,action) => {
+      state.filteredExpenses = action.payload;
+    }
   },
 });
 
-export const { addExpenseAction, deleteExpenseByNanoID } = expenseSlice.actions;
+export const { addExpenseAction, deleteExpenseByNanoID, filteredExpensesAction } = expenseSlice.actions;
 
 export default expenseSlice.reducer;

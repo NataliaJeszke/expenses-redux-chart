@@ -5,11 +5,13 @@ import ChartStyle from "./ChartStyle.module.css";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function Chart() {
- 
-  const filteredExpenses = useSelector((store)=>store.EXPENSE.filteredExpenses);
+  const filteredExpenses = useSelector(
+    (store) => store.EXPENSE.filteredExpenses
+  );
 
-
-  const categoriesSet = new Set(filteredExpenses.map((expense) => expense.category));
+  const categoriesSet = new Set(
+    filteredExpenses.map((expense) => expense.category)
+  );
 
   const categories = [...categoriesSet];
 

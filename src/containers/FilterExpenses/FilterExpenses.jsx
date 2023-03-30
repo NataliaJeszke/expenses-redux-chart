@@ -4,7 +4,7 @@ import { filteredExpensesAction } from "../../store/expense/expense-slice";
 
 export const FilterExpenses = (selectedCategories) => {
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
-
+  
   const dispatch = useDispatch();
 
   const filteredExpenses =

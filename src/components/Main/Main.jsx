@@ -1,5 +1,4 @@
 import { ExpensesContainer } from "../../containers/ExpensesContainer/ExpensesContainer";
-import FilterSelect from "../../containers/FilterSelect/FilterSelect";
 import { Chart } from "../Chart/Chart";
 import { InputSection } from "./InputSection/InputSection";
 import mainStyle from "./MainStyle.module.css";

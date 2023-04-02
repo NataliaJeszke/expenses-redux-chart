@@ -1,10 +1,9 @@
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { filteredExpensesAction } from "../../store/expense/expense-slice";
 
 export const FilterExpenses = (selectedCategories) => {
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
-  
+
   const dispatch = useDispatch();
 
   const filteredExpenses =

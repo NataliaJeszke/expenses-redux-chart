@@ -15,7 +15,6 @@ export const categorySlice = createSlice({
   },
   reducers: {
     addCategoryAction: (currentSlice, action) => {
-      // currentSlice.categoryList.push(action.payload);
       const isDuplicate = currentSlice.categoryList.some(
         (category) => category.value === action.payload.value
       );

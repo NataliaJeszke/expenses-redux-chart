@@ -1,4 +1,4 @@
-import { Categories } from "../../containers/Categories/Categories";
+import { Categories } from "./Categories/Categories";
 import { ExpensesContainer } from "../../containers/ExpensesContainer/ExpensesContainer";
 import { Chart } from "../Chart/Chart";
 import { InputSection } from "./InputSection/InputSection";

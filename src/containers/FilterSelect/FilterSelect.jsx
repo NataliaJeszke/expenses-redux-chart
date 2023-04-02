@@ -1,16 +1,21 @@
 import Select from "react-select";
 import { useSelector } from "react-redux";
 
-
-
 const FilterSelect = ({ selectedCategories, handleCategoryClick }) => {
-  const catalogue = useSelector((store)=>store.CATEGORY.categoryList);
-  
+  const expenseList = useSelector((store) => store.EXPENSE.expenseList);
+
+  const categoriesSet = new Set(expenseList.map((expense) => expense.category));
+
+  const categories = [...categoriesSet].map((category) => ({
+    value: category,
+    label: category,
+  }));
+
   return (
     <Select
       closeMenuOnSelect={false}
       isMulti
-      options={catalogue}
+      options={categories}
       onChange={handleCategoryClick}
       value={selectedCategories.map((category) => ({
         value: category,

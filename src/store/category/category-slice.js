@@ -11,10 +11,21 @@ export const categorySlice = createSlice({
       { value: "medical", label: "Medical" },
       { value: "personal", label: "Personal" },
     ],
+    isDuplicated: false,
   },
   reducers: {
     addCategoryAction: (currentSlice, action) => {
-      currentSlice.categoryList.push(action.payload);
+      // currentSlice.categoryList.push(action.payload);
+      const isDuplicate = currentSlice.categoryList.some(
+        (category) => category.value === action.payload.value
+      );
+
+      if (isDuplicate) {
+        currentSlice.isDuplicated = true;
+      } else {
+        currentSlice.categoryList.push(action.payload);
+        currentSlice.isDuplicated = false;
+      }
     },
 
     deleteCategory: (currentSlice, action) => {

@@ -17,12 +17,9 @@ export const categorySlice = createSlice({
       currentSlice.categoryList.push(action.payload);
     },
     deleteCategory: (currentSlice, action) => {
-      const index = currentSlice.categoryList.findIndex(
-        (category) => category.value === action.payload
+      currentSlice.categoryList = currentSlice.categoryList.filter(
+        (category) => category.value !== action.payload
       );
-      if (index !== -1) {
-        currentSlice.categoryList.splice(index, 1);
-      }
     },
   },
 });

@@ -1,13 +1,18 @@
-import { addCategoryAction } from "../../store/category/category-slice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { CategoryInput } from "../CategoryInput/CategoryInput";
+import { CategoriesList } from "../CategoriesList/CategoriesList";
 
 export function Categories() {
+
+const categories = useSelector((store)=>store.CATEGORY.categoryList);
+
+console.log(categories)
+
   return (
     <div>
       <CategoryInput />
-      <div>Lista kategorii</div>
+      <CategoriesList items={categories}/>
     </div>
   );
 }

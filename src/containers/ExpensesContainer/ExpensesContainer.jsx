@@ -7,8 +7,6 @@ import FilterSelect from "../FilterSelect/FilterSelect";
 import { FilterExpenses } from "../FilterExpenses/FilterExpenses";
 
 export function ExpensesContainer({}) {
-  //Get all items (expenses) from store and filter by categories//
-
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   const handleCategoryClick = (categories) => {

@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
-import { deleteExpenseByNanoID } from "../../store/expense/expense-slice";
-import buttonStyle from "./ButtonItemStyle.module.css"
+import { deleteExpenseByNanoID } from "../../../store/expense/expense-slice";
+import buttonStyle from "./ButtonItemStyle.module.css";
+
 const ButtonItem = ({ item }) => {
   const dispatch = useDispatch();
 
@@ -9,7 +10,9 @@ const ButtonItem = ({ item }) => {
   };
 
   return (
-    <button className={buttonStyle.buttonItem} onClick={handleRemove}>Delete</button>
+    <button className={buttonStyle.buttonItem} onClick={handleRemove}>
+      Delete
+    </button>
   );
 };
 

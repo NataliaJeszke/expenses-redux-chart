@@ -2,6 +2,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import ChartStyle from "./ChartStyle.module.css";
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function Chart() {

@@ -1,17 +1,14 @@
 import { useSelector } from "react-redux";
-import { CategoryInput } from "../CategoryInput/CategoryInput";
+import { CategoryInput } from "../../../containers/CategoryInput/CategoryInput";
 import { CategoriesList } from "../CategoriesList/CategoriesList";
 
 export function Categories() {
-
-const categories = useSelector((store)=>store.CATEGORY.categoryList);
-
-console.log(categories)
+  const categories = useSelector((store) => store.CATEGORY.categoryList);
 
   return (
     <div>
       <CategoryInput />
-      <CategoriesList items={categories}/>
+      <CategoriesList items={categories} />
     </div>
   );
 }

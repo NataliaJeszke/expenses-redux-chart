@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
-import { deleteCategory } from "../../store/category/category-slice";
+import { deleteCategory } from "../../../store/category/category-slice";
 
 const ButtonCategoryDelete = ({ item }) => {
   const dispatch = useDispatch();
 
-  const handleRemoveCategory = () => {
+  const handleRemoveCat = () => {
     dispatch(deleteCategory(item.value));
   };
 
-  return <button onClick={handleRemoveCategory}>Delete</button>;
+  return <button onClick={handleRemoveCat}>Delete</button>;
 };
 
 export default ButtonCategoryDelete;

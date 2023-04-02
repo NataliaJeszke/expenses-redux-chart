@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import expensesTotalStyle from "./ExpensesTotalStyle.module.css";
+
 export function ExpenseTotal(props) {
   const expenses = props.expenses;
   const income = useSelector((store) => store.INCOME.income);

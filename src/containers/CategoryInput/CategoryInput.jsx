@@ -19,7 +19,7 @@ export function CategoryInput() {
   }
 
   return (
-    <form onSubmit={submit}>
+    <form onSubmit={submit} id="addCategory">
       <label htmlFor="categoryValue">Add Category:</label>
       <input
         type="text"

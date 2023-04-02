@@ -1,4 +1,4 @@
-import { CategoryItem } from "../CategoryItem/CategoryItem";
+import { CategoryItem } from "../../CategoryItem/CategoryItem";
 
 export function CategoriesList({ items }) {
   return (

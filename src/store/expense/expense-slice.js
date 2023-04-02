@@ -10,7 +10,6 @@ export const expenseSlice = createSlice({
   },
   reducers: {
     addExpenseAction: (currentSlice, action) => {
-      console.log(action);
       currentSlice.expenseList.push(action.payload);
     },
     deleteExpenseByNanoID: (state, action) => {

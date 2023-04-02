@@ -6,7 +6,6 @@ export function CategoryItem({ item }) {
   const dispatch = useDispatch();
 
   const handleRemoveCat = () => {
-    console.log("usuwam kategorię");
     dispatch(deleteCategory(item.value));
   };
   return (

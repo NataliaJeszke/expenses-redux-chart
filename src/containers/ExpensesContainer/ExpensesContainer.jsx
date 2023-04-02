@@ -1,5 +1,4 @@
 import { List } from "../../components/Main/List/List";
-import { useSelector } from "react-redux";
 import { useState } from "react";
 import { ExpenseTotal } from "../ExpenseTotal/ExpenseTotal";
 import ExpensesContainerStyle from "./ExpensesContainerStyle.module.css";

@@ -16,6 +16,7 @@ export const categorySlice = createSlice({
     addCategoryAction: (currentSlice, action) => {
       currentSlice.categoryList.push(action.payload);
     },
+
     deleteCategory: (currentSlice, action) => {
       currentSlice.categoryList = currentSlice.categoryList.filter(
         (category) => category.value !== action.payload

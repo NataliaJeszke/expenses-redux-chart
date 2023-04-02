@@ -1,5 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useSelector } from "react-redux";
 import { CategoryInput } from "../CategoryInput/CategoryInput";
 import { CategoriesList } from "../CategoriesList/CategoriesList";
 

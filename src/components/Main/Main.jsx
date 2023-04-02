@@ -1,3 +1,4 @@
+import { Categories } from "../../containers/Categories/Categories";
 import { ExpensesContainer } from "../../containers/ExpensesContainer/ExpensesContainer";
 import { Chart } from "../Chart/Chart";
 import { InputSection } from "./InputSection/InputSection";
@@ -12,6 +13,7 @@ export function Main() {
           <ExpensesContainer />
           <Chart />
         </div>
+        <Categories />
       </div>
     </>
   );

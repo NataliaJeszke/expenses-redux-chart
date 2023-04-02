@@ -1,7 +1,11 @@
 import Select from "react-select";
-import catalogue from "../SelectInput/catalogue";
+import { useSelector } from "react-redux";
+
+
 
 const FilterSelect = ({ selectedCategories, handleCategoryClick }) => {
+  const catalogue = useSelector((store)=>store.CATEGORY.categoryList);
+  
   return (
     <Select
       closeMenuOnSelect={false}

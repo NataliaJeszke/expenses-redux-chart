@@ -1,0 +1,6 @@
+[
+    {
+        "technologies": "ReactJS, Redux-toolkit, React-Select, React-chartjs-2",
+        "description": "Add, remove, filter your expenses. Pie chart displayed with your expenses."
+    }
+]
